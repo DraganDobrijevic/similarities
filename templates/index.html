@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+
+            <p>Please input file1 and file2:</p>
+            <input type="file" placeholder="file1" name="file1">
+            <input type="file" placeholder="file2" name="file2">
+
+            <p>Please select algorithm:</p>
+            <input type="radio" name="algorithm" value="lines">lines<br>
+            <input type="radio" name="algorithm" value="sentences">sentences<br>
+            <input type="radio" name="algorithm" value="substring">substrings<br>
+
+            <p>If you selected a substrings, you must enter the length of the substring:</p>
+            <input type="number" placeholder="number" name="length">
+
+            <button type="submit">Compare</button>
+
+        </form>
+    </div>
+
+{% endblock %}
